@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import Button from './custom/Button';
 import './App.css';
+import './custom/Button/Button.css';
 
 function App() {
+  function Handle(){
+    alert('You clicked me');
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>
+        <Button type={'primary'} onClick={Handle}>Primary</Button>
+      </p>
+      <p>
+        <Button type={'secondary'} >Secondary</Button>
+      </p>
+      <p>
+        <Button type={'tertiary'} >Tertiary</Button>
+      </p>
+      <p>
+        <Button type={'outline_grey'} >Outline Grey</Button>
+      </p>
     </div>
   );
 }
